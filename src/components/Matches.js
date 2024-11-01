@@ -66,11 +66,16 @@ const Matches = () => {
 
   return (
     <div>
-    <h1>Gameweek {currentWeek}</h1>
+    <h1 className="text-center font-bold mb-4">Gameweek {currentWeek}</h1>
       <ul>
         {fixtures.map(fixture => (
-          <li key={fixture.id}>
-            {getTeamName(fixture.team_h)} - {getTeamName(fixture.team_a)}
+          <li key={fixture.id} className="mb-3 text-center">
+            <div className="font-semibold">
+              {getTeamName(fixture.team_h)} - {getTeamName(fixture.team_a)}
+            </div>
+            <div className="text-gray-600">
+              {fixture.team_h_score} - {fixture.team_a_score}
+            </div>
           </li>
         ))}
       </ul>
