@@ -66,7 +66,7 @@ const Matches = () => {
 
   return (
     <div>
-    <h1 className="text-center font-bold mb-4">HATTATERE{currentWeek}</h1>
+    <h1 className="text-center font-bold mb-4">Gameweek {currentWeek}</h1>
       <ul>
         {fixtures.map(fixture => (
           <li key={fixture.id} className="mb-3 text-center">
