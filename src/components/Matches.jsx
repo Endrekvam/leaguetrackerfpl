@@ -29,7 +29,7 @@ const Matches = () => {
         // Find the current gameweek
         let currentWeek = 1;
         gameweekData.events.forEach(event => {
-          if (event.finished) {
+          if (event.is_current) {
             currentWeek = event.id;
           }
         });
