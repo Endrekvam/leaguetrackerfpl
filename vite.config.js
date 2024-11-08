@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/leaguetrackerfpl",
 
   // API proxy
-  server: {
+  /*server: {
     proxy: {
       '/fixtures': {
         target: 'https://fantasy.premierleague.com/api',
@@ -22,5 +22,5 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/bootstrap-static/, '/bootstrap-static/'),
       },
     },
-  },
+  },*/
 })
