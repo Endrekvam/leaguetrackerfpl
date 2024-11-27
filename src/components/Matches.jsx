@@ -14,11 +14,14 @@ const Matches = () => {
       try {
         setLoading(true);
 
+        // Midlertidlig proxy for github pages
+        
         const [gameweekResponse, fixturesResponse] = await Promise.all([
-          fetch("https://proxy.cors.sh/https://fantasy.premierleague.com/api/bootstrap-static/"),
-          fetch("https://proxy.cors.sh/https://fantasy.premierleague.com/api/fixtures/")
+          fetch("https://fplproxy.vercel.app/api/bootstrap-static"),
+          fetch("https://fplproxy.vercel.app/api/fixtures/")
         ]);
-
+        
+       
         if (!gameweekResponse.ok || !fixturesResponse.ok) {
           throw new Error('Failed to fetch one or more resources');
         }
