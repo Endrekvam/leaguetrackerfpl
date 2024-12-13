@@ -5,22 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "/leaguetrackerfpl",
-
-  // API proxy
-  /*server: {
-    proxy: {
-      '/fixtures': {
-        target: 'https://fantasy.premierleague.com/api',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/fixtures/, '/fixtures/'),
-      },
-      '/bootstrap-static': {
-        target: 'https://fantasy.premierleague.com/api',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/bootstrap-static/, '/bootstrap-static/'),
-      },
-    },
-  },*/
+  build: {
+    outDir: 'dist',
+  },
 })
